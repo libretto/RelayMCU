@@ -51,7 +51,7 @@ void uart_init();
 
 void main()
 {
-	char a[] = { "UP" };
+	char a[] = { 'U','P' };
 
 	relay_pin = 0;
 
