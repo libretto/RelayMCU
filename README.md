@@ -1,13 +1,15 @@
 # RelayMCU
 
-Code for STC15F104W MCU which was installed in cheap ESP-01 relay module marked "LCTECH".
+Code for STC15F104W MCU which was installed in cheap ESP-01 relay module marked "LCTECH". 
 
 ![LCTECH ESP-01 based Module with STC15F100W MCU connected to USB-UART](relay-uart.jpg?raw=true "Relay with STC15F104W MCU driven by ESP-01")
 
 I bought few such modules from ebay but they had broken MCU firmware and not works. It must accept on UART commands (hex): A0 01 01 A2 for Relay ON and A0 01 00 A1 for Relay OFF
 
-UART interaction code I got from STC15F100 docs
+UART interaction code I got from STC15F100 docs 
 http://www.stcmicro.com/datasheet/STC15F100-en.pdf
+
+By the way this MCU has very similar architecture to 8051 MCU so some code which works on 8051 MCU also may work there. 
 
 # To compile this code under linux run: 
 
