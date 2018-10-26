@@ -22,3 +22,8 @@ By the way this MCU has very similar architecture to 8051 MCU so some code which
   disconnect +5V (red wire on image) and connect it again for start flashing. 
   
 
+# Modification ONE.
+
+Relay board MCU is connected to relay by pin 3.2. This pin has high level on cold reset or power on so device based on this board will click each boot time. To avoid this issue I added 2K resistor between pin 7 of MCU and GND and changed code by configuring push-pull mode on P3.2ch MCU pin 3.2. See article "How to Make I/O Port Low after MCU Reset" in STC15F100 docs.
+
+![LCTECH modifiacion of circuit to avoid relay click after reset](pin-low-on-boot.jpg?raw=true "Relay board with added resistor for pin LOW after reset")

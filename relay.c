@@ -21,6 +21,8 @@
 
     
 __sfr __at(0x8E) AUXR;
+__sfr __at(0xB1) P3M1;
+__sfr __at(0xB2) P3M0;
 
 #define RXB P3_0
 #define TXB P3_1
@@ -52,6 +54,11 @@ void uart_init();
 void main()
 {
 	char a[] = { 'U','P' };
+
+// set push-pull mode to P3.2 
+
+    P3M1=0;
+    P3M0=4;
 
 	relay_pin = 0;
 
